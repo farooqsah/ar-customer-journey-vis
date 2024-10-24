@@ -12,7 +12,7 @@ const removeEmptyValues = (obj) => {
   );
 };
 
-const CustomerJourney = () => {
+const UserSearch = () => {
   const router = useRouter();
   const { control, handleSubmit } = useForm();
   const [errorMessage, setErrorMessage] = useState('');
@@ -91,4 +91,4 @@ const CustomerJourney = () => {
   );
 };
 
-export default CustomerJourney;
+export default UserSearch;
