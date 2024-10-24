@@ -66,6 +66,70 @@
           "timestamp": "2024-10-22T15:16:16.39Z"
         }
       ]
+    },
+     {
+      "profile_id":"01d31674-f4e4-4724-9dd9-d7b65f46d1a0",
+      "visit_id": "a6da1fa8-8917-4afd-b90d-2b58412b927c",
+      "brand": "fdr",
+      "utm_source":"tree",
+      "email": "piranaf1ajo@bills.com",
+      "phone":"4157102346",
+      "creative": "https://www.lendingtree.com/content/themes/lt-wp-www-theme/dist/images/lt-logo.svg",
+      "events": [
+        {
+          "name": "www - login",
+          "timestamp": "2024-09-15T20:10:13.310Z"
+        },
+        {
+          "name": "LX - Landing page",
+          "timestamp": "2024-09-15T18:09:29.677Z"
+        },
+	{
+          "name": "LX - Contact Info submitted",
+          "timestamp": "2024-09-15T18:09:58.052Z"
+        },
+	{
+          "name": "LX - Credit Pull",
+          "timestamp": "2024-09-15T18:10:58.674Z"
+        },
+	{
+          "name": "LX - LFQ",
+          "timestamp": "2024-09-15T18:11:03.470Z"
+        },
+	{
+          "name": "DEX  - Landed",
+          "timestamp": "2024-09-15T18:15:33.449Z"
+        },
+	{
+          "name": "www - login",
+          "timestamp": "2024-09-15T19:41:43.338Z"
+        },
+	{
+          "name": "FDR - Dashboard",
+          "timestamp": "2024-09-15T19:42:21.270Z"
+        },
+	
+	{
+          "name": "email sent",
+          "timestamp": "2024-10-15T20:34:33.28Z"
+        },
+	{
+          "name": "email sent",
+          "timestamp": "2024-10-15T21:20:30.38Z"
+        },
+	{
+          "name": "email sent",
+          "timestamp": "2024-10-22T15:16:16.39Z"
+        },
+	{
+          "name": "sms sent",
+          "timestamp": "2024-10-13T10:11:39.12Z"
+        },
+	{
+          "name": "sms sent",
+          "timestamp": "2024-10-22T15:16:16.39Z"
+        }
+      ]
     }
   ]
 }

@@ -52,6 +52,19 @@ export const groupByApplication  = visitId => {
     return  Object.keys(applications);
 }
 
+export const groupByVisitId  = email => {
+    const filteredSessions = eventdata.sessions.filter(d => d.email == email );
+      const sessions = filteredSessions.reduce((result, val) => {
+            const key = val.visit_id;
+                (result[key] = result[key] || []).push(val);
+
+                return result;
+
+            }, {});
+
+            
+    return  Object.keys(sessions);
+}
 
 export const byByApplicationAndId  = (visit_id, application) => {
     return eventdata.filter(d => d.visit_id == visit_id && d.application == application );
