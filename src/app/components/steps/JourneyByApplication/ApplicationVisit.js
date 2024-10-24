@@ -22,7 +22,7 @@ const ApplicationVisit = props => {
     
       <Stepper  orientation="vertical">
         {props.steps.map((step, index) => (
-          <Step key={index}>
+          <Step active = {true} key={index}>
             <StepLabel
     
             >

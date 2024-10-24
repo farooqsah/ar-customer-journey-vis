@@ -1,169 +1,71 @@
-[{
-  "event_name": "Achieve-Web | Homepage - Page Loaded",
-  "application": "Achieve-Web",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Estimated Debt - Continue Clicked",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "States - Page Loaded",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "States - State Updated",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Contact Info - Page Loaded",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Contact Info - Continue Clicked",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": "piranaf1ajo@bills.com",
-  "phone": "14157102346"
-}, {
-  "event_name": "Retrieve Info - Page Loaded",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": "piranaf1ajo@bills.com",
-  "phone": "14157102346"
-}, {
-  "event_name": "Credit Pull Loading - Credit Pull Start",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": "piranaf1ajo@bills.com",
-  "phone": "14157102346"
-}, {
-  "event_name": "Credit Pull Loading - Lead Evaluate - LX",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": "piranaf1ajo@bills.com",
-  "phone": "14157102346"
-}, {
-  "event_name": "Credit Pull Loading - Long Form Qualified",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": "piranaf1ajo@bills.com",
-  "phone": "14157102346"
-}, {
-  "event_name": "Credit Pull Loading - Credit Pull Success",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": "piranaf1ajo@bills.com",
-  "phone": "14157102346"
-}, {
-  "event_name": "Coapp Retrieve Info - Page Loaded",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": "piranaf1ajo@bills.com",
-  "phone": "14157102346"
-}, {
-  "event_name": "Coapp Retrieve Info - No Thanks Link Clicked",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": "piranaf1ajo@bills.com",
-  "phone": "14157102346"
-}, {
-  "event_name": "Coapp Retrieve Info - Lead Transfer - LX | FULL_DEX",
-  "application": "fdr-cx-acquisition",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": "piranaf1ajo@bills.com",
-  "phone": "14157102346"
-}, {
-  "event_name": "DEX Transition - Page Loaded",
-  "application": "enrollment",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Income Employment - Continue Clicked",
-  "application": "enrollment",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Personalize Investments - Page Loaded",
-  "application": "enrollment",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Personalize Investments - Yes Clicked",
-  "application": "enrollment",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Income Investment - Page Loaded",
-  "application": "enrollment",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Introduction - Continue Button Clicked",
-  "application": "sales-demo",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Discuss Financial Goals - Continue Button Clicked",
-  "application": "sales-demo",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Debt Summary - Page Loaded",
-  "application": "sales-demo",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Debt Summary - Continue Button Clicked",
-  "application": "sales-demo",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}, {
-  "event_name": "Compare Options - Page Loaded",
-  "application": "sales-demo",
-  "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
-  "profile_id": null,
-  "email": null,
-  "phone": null
-}]
+{
+  "created_at": "2024-09-15T18:09:28Z",
+  "first_interaction": "2024-09-15T18:09:29Z",
+  "last_interaction": "2024-10-22T10:08:35Z",
+  "sessions": [
+    {
+      "profile_id":"01d31674-f4e4-4724-9dd9-d7b65f46d1a0",
+      "visit_id": "ec85ad30-4fcf-45aa-aeab-743b93fe209e",
+      "brand": "fdr",
+      "utm_source":"tree",
+      "email": "piranaf1ajo@bills.com",
+      "phone":"4157102346",
+      "creative": "https://www.lendingtree.com/content/themes/lt-wp-www-theme/dist/images/lt-logo.svg",
+      "events": [
+        {
+          "name": "www - login",
+          "timestamp": "2024-09-15T20:10:13.310Z"
+        },
+        {
+          "name": "LX - Landing page",
+          "timestamp": "2024-09-15T18:09:29.677Z"
+        },
+	{
+          "name": "LX - Contact Info submitted",
+          "timestamp": "2024-09-15T18:09:58.052Z"
+        },
+	{
+          "name": "LX - Credit Pull",
+          "timestamp": "2024-09-15T18:10:58.674Z"
+        },
+	{
+          "name": "LX - LFQ",
+          "timestamp": "2024-09-15T18:11:03.470Z"
+        },
+	{
+          "name": "DEX  - Landed",
+          "timestamp": "2024-09-15T18:15:33.449Z"
+        },
+	{
+          "name": "www - login",
+          "timestamp": "2024-09-15T19:41:43.338Z"
+        },
+	{
+          "name": "FDR - Dashboard",
+          "timestamp": "2024-09-15T19:42:21.270Z"
+        },
+	
+	{
+          "name": "email sent",
+          "timestamp": "2024-10-15T20:34:33.28Z"
+        },
+	{
+          "name": "email sent",
+          "timestamp": "2024-10-15T21:20:30.38Z"
+        },
+	{
+          "name": "email sent",
+          "timestamp": "2024-10-22T15:16:16.39Z"
+        },
+	{
+          "name": "sms sent",
+          "timestamp": "2024-10-13T10:11:39.12Z"
+        },
+	{
+          "name": "sms sent",
+          "timestamp": "2024-10-22T15:16:16.39Z"
+        }
+      ]
+    }
+  ]
+}
