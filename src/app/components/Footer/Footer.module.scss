@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #EFF5FF;
+    color: #142E57;
+    padding-top: 32px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.border {
+    border-top: 1px solid #333;
+}
