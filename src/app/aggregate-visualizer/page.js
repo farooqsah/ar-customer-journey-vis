@@ -98,6 +98,9 @@ const AggregateVisualizer = () => {
       link: {
         colorMode: colorMode,
       },
+      node: {
+        interactivity: true,
+      },
     },
   };
 
