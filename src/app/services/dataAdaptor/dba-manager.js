@@ -27,7 +27,7 @@ export const search = (visitId = null, profileId = null, email =  null, phone = 
             return filterByEmail && filterByEmail.length > 0 ? filterByEmail : profileFilter; 
         }
 
-         case !!email:
+         case !!phone:
         {
           
             const filterByPhone = eventdata.filter(d => d.form.phone == phone );
@@ -43,3 +43,6 @@ export const groupByApplication  = visit_id => {
     return Object.groupBy( getByVisitID(visit_id), ({ application }) => application);
 }
 
+export const byByApplicationAndId  = (visit_id, application) => {
+    return eventdata.filter(d => d.ids.visit_id == visit_id && d.application == application );
+}
