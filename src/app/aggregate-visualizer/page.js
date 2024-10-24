@@ -97,6 +97,7 @@ const AggregateVisualizer = () => {
     sankey: {
       link: {
         colorMode: colorMode,
+        interactivity: true,
       },
       node: {
         interactivity: true,
