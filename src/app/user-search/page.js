@@ -1,15 +1,34 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { useForm, Controller } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
+
+const removeEmptyValues = (obj) => {
+  return Object.fromEntries(
+    Object.entries(obj).filter(([, v]) => v != null && v !== '')
+  );
+};
 
 const CustomerJourney = () => {
+  const router = useRouter();
   const { control, handleSubmit } = useForm();
+  const [errorMessage, setErrorMessage] = useState('');
 
   const onSubmit = (data) => {
-    console.log(data);
+    const enteredData = removeEmptyValues(data);
+
+    if (Object.keys(enteredData).length === 0) {
+      setErrorMessage('Please enter at least one search field');
+      return;
+    }
+
+    setErrorMessage(''); // Clear any previous error messages
+
+    // Navigate to the next page with form data as query parameters
+    router.push(`/?${new URLSearchParams(enteredData).toString()}`);
   };
 
   return (
@@ -53,6 +72,11 @@ const CustomerJourney = () => {
             )}
           />
         ))}
+        {errorMessage && (
+          <Typography color="error" variant="body2" sx={{ marginTop: 1 }}>
+            {errorMessage}
+          </Typography>
+        )}
         <Button
           type="submit"
           variant="contained"
