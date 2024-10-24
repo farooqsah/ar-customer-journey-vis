@@ -1,8 +1,14 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Chart } from 'react-google-charts';
 import Layout from '../components/Layout';
+import {
+  FormControl,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+} from '@mui/material';
 
 export const STEPS = {
   ABANDON: 'Abandon',
@@ -84,11 +90,41 @@ export const data = [
   [DEX_LANDED, ABANDON, 200],
 ];
 
-export const options = {};
-
 const AggregateVisualizer = () => {
+  const [colorMode, setColorMode] = useState('gradient');
+
+  const options = {
+    sankey: {
+      link: {
+        colorMode: colorMode,
+      },
+    },
+  };
+
+  const handleColorModeChange = (event) => {
+    setColorMode(event.target.value);
+  };
+
   return (
     <Layout>
+      <FormControl component="fieldset">
+        <RadioGroup
+          row
+          aria-label="colorMode"
+          name="colorMode"
+          value={colorMode}
+          onChange={handleColorModeChange}
+        >
+          <FormControlLabel
+            value="gradient"
+            control={<Radio />}
+            label="Gradient"
+          />
+          <FormControlLabel value="source" control={<Radio />} label="Source" />
+          <FormControlLabel value="target" control={<Radio />} label="Target" />
+          <FormControlLabel value="none" control={<Radio />} label="None" />
+        </RadioGroup>
+      </FormControl>
       <Chart
         chartType="Sankey"
         width="100%"
