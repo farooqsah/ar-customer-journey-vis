@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import { Box, TextField, Button, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { Box, Button, TextField, Typography } from '@mui/material';
+import { useForm, Controller } from 'react-hook-form';
 
 const CustomerJourney = () => {
   const { control, handleSubmit } = useForm();
@@ -34,16 +36,16 @@ const CustomerJourney = () => {
         width="100%"
         maxWidth="400px"
       >
-        {['visit_id', 'profile_id', 'email', 'phone'].map((field) => (
+        {['visit_id', 'profile_id', 'email', 'phone'].map((fieldName) => (
           <Controller
-            key={field}
-            name={field}
+            key={fieldName}
+            name={fieldName}
             control={control}
             defaultValue=""
             render={({ field }) => (
               <TextField
                 {...field}
-                label={field.replace('_', ' ')}
+                label={fieldName}
                 variant="outlined"
                 margin="normal"
                 fullWidth
