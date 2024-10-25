@@ -18,7 +18,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
-const  CustomizedDialogs = ({imageSrc, label}) => {
+const  CustomizedDialogs = ({imageSrc, label, title}) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -39,7 +39,7 @@ const  CustomizedDialogs = ({imageSrc, label}) => {
         open={open}
       >
         <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-          Modal title
+          {title}
         </DialogTitle>
         <IconButton
           aria-label="close"
@@ -56,8 +56,8 @@ const  CustomizedDialogs = ({imageSrc, label}) => {
         <DialogContent dividers>
            <Image
       src= {imageSrc}
-      width={500}
-      height={500}
+      width={800}
+      height={800}
       alt="Picture of the author"
     />
         </DialogContent>
