@@ -25,12 +25,14 @@ const Header = () => {
         </Box>
 
         {/* Right Logo */}
-        <Image
-          alt="Customer Journey Logo"
-          width={200}
-          height={100}
-          src="/eyelogo.png"
-        />
+        <a href="/search">
+          <Image
+            alt="Customer Journey Logo"
+            width={200}
+            height={100}
+            src="/eyelogo.png"
+          />
+        </a>
       </Box>
     </header>
   );
