@@ -10,6 +10,7 @@ import {
   Radio,
   RadioGroup,
 } from '@mui/material';
+import { useRouter } from 'next/navigation';
 
 export const STEPS = {
   ABANDON: 'Abandon',
@@ -92,6 +93,7 @@ export const data = [
 ];
 
 const AggregateVisualizer = () => {
+  const router = useRouter();
   const [colorMode, setColorMode] = useState('gradient');
 
   const options = {
@@ -108,6 +110,10 @@ const AggregateVisualizer = () => {
 
   const handleColorModeChange = (event) => {
     setColorMode(event.target.value);
+  };
+
+  const handleDoubleClick = () => {
+    router.push('/visitor-session');
   };
 
   return (
@@ -139,13 +145,15 @@ const AggregateVisualizer = () => {
             <FormControlLabel value="none" control={<Radio />} label="None" />
           </RadioGroup>
         </FormControl>
-        <Chart
-          chartType="Sankey"
-          width="100%"
-          height="680px"
-          data={data}
-          options={options}
-        />
+        <div onDoubleClick={handleDoubleClick}>
+          <Chart
+            chartType="Sankey"
+            width="100%"
+            height="680px"
+            data={data}
+            options={options}
+          />
+        </div>
       </Box>
     </Layout>
   );
