@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Box, Typography, Stepper, Step, StepLabel } from '@mui/material';
-
+import Link from 'next/link'
 const ApplicationVisit = props => {
   
   return (
@@ -26,7 +26,8 @@ const ApplicationVisit = props => {
             <StepLabel
     
             >
-              {step}
+              
+              <Link href="/aggregate-visualizer">{step}</Link>
             </StepLabel>
         
           </Step>
