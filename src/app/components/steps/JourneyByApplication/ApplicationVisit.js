@@ -66,8 +66,9 @@ const ApplicationVisit = props => {
          <FormControlLabel value="heatmapData_DREnrolledStraight" control={<Radio />} label="DREnrolledStraight" />
         
       </RadioGroup>
-      <CustomizedDialogs imageSrc = "/images/APLhome.png" label="APL Home"  title="APL Home"  />
-       <CustomizedDialogs imageSrc = "/images/debtReleaf.png" label="Google /Facebook ads" title="Google /Facebook ads" />
+       <CustomizedDialogs imageSrc = "/images/debtReleaf.png" label="Where they are coming from " title="Google /Facebook ads" />
+      <CustomizedDialogs imageSrc = "/images/APLhome.png" label="What they have seen from us"  title="APL Home"  />
+      
       <HeatMap heatmapData = { heatmapData} />
     </Box>
   )
