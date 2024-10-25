@@ -32,10 +32,18 @@ const VisitorSession = (props) => {
           minHeight="680px"
           padding={2}
         >
-          <Typography variant="h4" gutterBottom>
+          <Typography
+            variant="h4"
+            gutterBottom
+            fontFamily={"var(--font-ultramarine)"}
+          >
             Visitor Sessions
           </Typography>
-          <Typography variant="subtitle1" gutterBottom>
+          <Typography
+            variant="subtitle1"
+            gutterBottom
+            fontFamily={"var(--font-ultramarine)"}
+          >
             Show all your sessions
           </Typography>
           <Box
