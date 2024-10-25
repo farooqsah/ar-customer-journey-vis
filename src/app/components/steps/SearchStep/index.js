@@ -72,8 +72,9 @@ const SearchStep = () => {
           width="100%"
           maxWidth="400px"
         >
-          <Typography variant="h6" sx={{ marginBottom: 2 }}>
-            Individual Search
+          <Typography variant="h6">Individual Search</Typography>
+          <Typography variant="h7" sx={{ marginBottom: 2, fontSize: '15px' }}>
+            Visualize the Journey path of a specific user
           </Typography>
           {['visit_id', 'profile_id', 'email', 'phone'].map((fieldName) => (
             <Controller
@@ -119,8 +120,9 @@ const SearchStep = () => {
           width="100%"
           maxWidth="400px"
         >
-          <Typography variant="h6" sx={{ marginBottom: 2 }}>
-            Group Search
+          <Typography variant="h6">Group Search</Typography>
+          <Typography sx={{ marginBottom: 2, fontSize: '15px' }}>
+            Visualize the Journey by a Segment, Partner, or Campaign
           </Typography>
           {['utm_source', 'utm_adcampaign', 'origin', 'date'].map(
             (fieldName) => (
