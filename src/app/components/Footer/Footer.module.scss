@@ -5,9 +5,11 @@
     color: #142E57;
     padding-top: 32px;
     width: 100%;
-    align-items: center;
     justify-content: center;
     padding: 16px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 .border {
     border-top: 1px solid #333;
