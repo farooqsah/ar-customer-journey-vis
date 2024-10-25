@@ -4,11 +4,13 @@ import React, { useState } from 'react';
 import { Chart } from 'react-google-charts';
 import Layout from '../components/Layout';
 import {
+  Box,
   FormControl,
   FormControlLabel,
   Radio,
   RadioGroup,
 } from '@mui/material';
+import { useRouter } from 'next/navigation';
 
 export const STEPS = {
   ABANDON: 'Abandon',
@@ -91,6 +93,7 @@ export const data = [
 ];
 
 const AggregateVisualizer = () => {
+  const router = useRouter();
   const [colorMode, setColorMode] = useState('gradient');
 
   const options = {
@@ -109,33 +112,49 @@ const AggregateVisualizer = () => {
     setColorMode(event.target.value);
   };
 
+  const handleDoubleClick = () => {
+    router.push('/visitor-session');
+  };
+
   return (
     <Layout>
-      <FormControl component="fieldset">
-        <RadioGroup
-          row
-          aria-label="colorMode"
-          name="colorMode"
-          value={colorMode}
-          onChange={handleColorModeChange}
-        >
-          <FormControlLabel
-            value="gradient"
-            control={<Radio />}
-            label="Gradient"
+      <Box margin="0 10px">
+        <FormControl component="fieldset">
+          <RadioGroup
+            row
+            aria-label="colorMode"
+            name="colorMode"
+            value={colorMode}
+            onChange={handleColorModeChange}
+          >
+            <FormControlLabel
+              value="gradient"
+              control={<Radio />}
+              label="Gradient"
+            />
+            <FormControlLabel
+              value="source"
+              control={<Radio />}
+              label="Source"
+            />
+            <FormControlLabel
+              value="target"
+              control={<Radio />}
+              label="Target"
+            />
+            <FormControlLabel value="none" control={<Radio />} label="None" />
+          </RadioGroup>
+        </FormControl>
+        <div onDoubleClick={handleDoubleClick}>
+          <Chart
+            chartType="Sankey"
+            width="100%"
+            height="680px"
+            data={data}
+            options={options}
           />
-          <FormControlLabel value="source" control={<Radio />} label="Source" />
-          <FormControlLabel value="target" control={<Radio />} label="Target" />
-          <FormControlLabel value="none" control={<Radio />} label="None" />
-        </RadioGroup>
-      </FormControl>
-      <Chart
-        chartType="Sankey"
-        width="100%"
-        height="680px"
-        data={data}
-        options={options}
-      />
+        </div>
+      </Box>
     </Layout>
   );
 };
