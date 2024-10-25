@@ -1,27 +1,27 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import SearchIcon from '@mui/icons-material/Search';
-import { Box, Button, TextField, Typography, Divider } from '@mui/material';
-import { useForm, Controller } from 'react-hook-form';
-import { useRouter } from 'next/navigation';
-import { removeEmptyValues } from './helpers';
+import React, { useState } from "react";
+import SearchIcon from "@mui/icons-material/Search";
+import { Box, Button, TextField, Typography, Divider } from "@mui/material";
+import { useForm, Controller } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { removeEmptyValues } from "./helpers";
 
 const SearchStep = () => {
   const router = useRouter();
   const { control, handleSubmit } = useForm();
-  const [individualErrorMessage, setIndividualErrorMessage] = useState('');
-  const [groupErrorMessage, setGroupErrorMessage] = useState('');
+  const [individualErrorMessage, setIndividualErrorMessage] = useState("");
+  const [groupErrorMessage, setGroupErrorMessage] = useState("");
 
   const onSubmitIndividual = (data) => {
     const enteredData = removeEmptyValues(data);
 
     if (Object.keys(enteredData).length === 0) {
-      setIndividualErrorMessage('Please enter at least one search field');
+      setIndividualErrorMessage("Please enter at least one search field");
       return;
     }
 
-    setIndividualErrorMessage(''); // Clear any previous error messages
+    setIndividualErrorMessage(""); // Clear any previous error messages
 
     // Navigate to the next page with form data as query parameters
     router.push(
@@ -33,11 +33,11 @@ const SearchStep = () => {
     const enteredData = removeEmptyValues(data);
 
     if (Object.keys(enteredData).length === 0) {
-      setGroupErrorMessage('Please enter at least one search field');
+      setGroupErrorMessage("Please enter at least one search field");
       return;
     }
 
-    setGroupErrorMessage(''); // Clear any previous error messages
+    setGroupErrorMessage(""); // Clear any previous error messages
 
     // Navigate to the next page with form data as query parameters
     router.push(
@@ -57,7 +57,8 @@ const SearchStep = () => {
       <Typography
         variant="h4"
         gutterBottom
-        fontFamily={'var(--font-ultramarine)'}
+        fontFamily={"var(--font-ultramarine)"}
+        fontWeight={700}
       >
         Customer Journey
       </Typography>
@@ -76,17 +77,21 @@ const SearchStep = () => {
           width="100%"
           maxWidth="400px"
         >
-          <Typography variant="h6" fontFamily={'var(--font-ultramarine)'}>
+          <Typography
+            variant="h6"
+            fontFamily={"var(--font-ultramarine)"}
+            fontWeight={500}
+          >
             Individual Search
           </Typography>
           <Typography
             variant="h7"
-            fontFamily={'var(--font-ultramarine)'}
-            sx={{ marginBottom: 2, fontSize: '14px' }}
+            fontFamily={"var(--font-ultramarine)"}
+            sx={{ marginBottom: 2, fontSize: "14px" }}
           >
             Visualize the Journey path of a specific user
           </Typography>
-          {['visit_id', 'profile_id', 'email', 'phone'].map((fieldName) => (
+          {["visit_id", "profile_id", "email", "phone"].map((fieldName) => (
             <Controller
               key={fieldName}
               name={fieldName}
@@ -108,7 +113,7 @@ const SearchStep = () => {
               color="error"
               variant="body2"
               sx={{ marginTop: 1 }}
-              fontFamily={'var(--font-ultramarine)'}
+              fontFamily={"var(--font-ultramarine)"}
             >
               {individualErrorMessage}
             </Typography>
@@ -119,7 +124,7 @@ const SearchStep = () => {
             color="primary"
             startIcon={<SearchIcon />}
             sx={{ marginTop: 2 }}
-            fontFamily={'var(--font-ultramarine)'}
+            fontFamily={"var(--font-ultramarine)"}
           >
             Search
           </Button>
@@ -136,16 +141,16 @@ const SearchStep = () => {
           width="100%"
           maxWidth="400px"
         >
-          <Typography variant="h6" fontFamily={'var(--font-ultramarine)'}>
+          <Typography variant="h6" fontFamily={"var(--font-ultramarine)"}>
             Group Search
           </Typography>
           <Typography
-            sx={{ marginBottom: 2, fontSize: '14px' }}
-            fontFamily={'var(--font-ultramarine)'}
+            sx={{ marginBottom: 2, fontSize: "14px" }}
+            fontFamily={"var(--font-ultramarine)"}
           >
             Visualize the Journey by a Segment, Partner, or Campaign
           </Typography>
-          {['utm_source', 'utm_adcampaign', 'origin', 'date'].map(
+          {["utm_source", "utm_adcampaign", "origin", "date"].map(
             (fieldName) => (
               <Controller
                 key={fieldName}
@@ -169,7 +174,7 @@ const SearchStep = () => {
               color="error"
               variant="body2"
               sx={{ marginTop: 1 }}
-              fontFamily={'var(--font-ultramarine)'}
+              fontFamily={"var(--font-ultramarine)"}
             >
               {groupErrorMessage}
             </Typography>
@@ -180,7 +185,7 @@ const SearchStep = () => {
             color="primary"
             startIcon={<SearchIcon />}
             sx={{ marginTop: 2 }}
-            fontFamily={'var(--font-ultramarine)'}
+            fontFamily={"var(--font-ultramarine)"}
           >
             Search
           </Button>

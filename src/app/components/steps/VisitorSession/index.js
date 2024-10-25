@@ -29,13 +29,13 @@ const VisitorSession = (props) => {
           flexDirection="column"
           alignItems="center"
           justifyContent="center"
-          minHeight="680px"
           padding={2}
         >
           <Typography
             variant="h4"
             gutterBottom
             fontFamily={"var(--font-ultramarine)"}
+            fontWeight={700}
           >
             Visitor Sessions
           </Typography>
@@ -43,6 +43,7 @@ const VisitorSession = (props) => {
             variant="subtitle1"
             gutterBottom
             fontFamily={"var(--font-ultramarine)"}
+            fontWeight={500}
           >
             Show all your sessions
           </Typography>
@@ -53,6 +54,7 @@ const VisitorSession = (props) => {
             alignItems="center"
             width="100%"
             maxWidth="400px"
+            marginTop="10px"
           >
             <List className={styles.list}>
               {props.sessions.map((session, index) => (
