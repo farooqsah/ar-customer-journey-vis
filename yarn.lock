@@ -694,6 +694,79 @@
   dependencies:
     tslib "^2.4.0"
 
+"@syncfusion/ej2-base@~27.1.50", "@syncfusion/ej2-base@~27.1.52":
+  version "27.1.55"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@syncfusion/ej2-base/-/ej2-base-27.1.55.tgz#2cafcec940025c60559bbc9043a72ae8e2e43f13"
+  integrity sha512-ZHtP1SGPfGrMtweYyvJk80piLcoFJCkmEQ/jg82NEldYeVfwYrw9W9OrPphkrzELu1WysrviwccUngWxAhykLA==
+  dependencies:
+    "@syncfusion/ej2-icons" "~27.1.50"
+
+"@syncfusion/ej2-compression@~27.1.50":
+  version "27.1.53"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@syncfusion/ej2-compression/-/ej2-compression-27.1.53.tgz#f3c10ddc423375ce646696aa70fc5a8770f4977f"
+  integrity sha512-fp6UwvNnhAQk3fwWG7Y3nIIIIx8W0+py3p/UvgTKYZe+zwISgLSE+mSX+e+vjL2qD6pyMg4DQJ2uaI+vV0zqDw==
+  dependencies:
+    "@syncfusion/ej2-file-utils" "~27.1.53"
+
+"@syncfusion/ej2-data@~27.1.50":
+  version "27.1.52"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@syncfusion/ej2-data/-/ej2-data-27.1.52.tgz#ac14f7af55d2b988a678a34b4d704abc51458105"
+  integrity sha512-ELtIAXoGd28sVreoxdul2GFPQh/Kf46wUA8JsHZlNHGyekSolRf2vhTofkDMaF0E7GIV6yUpFS7gd3aiRtkKSg==
+  dependencies:
+    "@syncfusion/ej2-base" "~27.1.52"
+
+"@syncfusion/ej2-file-utils@~27.1.50", "@syncfusion/ej2-file-utils@~27.1.53":
+  version "27.1.53"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@syncfusion/ej2-file-utils/-/ej2-file-utils-27.1.53.tgz#0224e4d5b76649f5ecae2d40cbd56434462ca7e9"
+  integrity sha512-MgXZh/KNd2HREItmbHHRIS/f6vgWLFn8uBUBe5LagolHpQporUJMOn66gr8FEtwKpynWKNBOfhPsQKyhHTFbxw==
+
+"@syncfusion/ej2-heatmap@27.1.50":
+  version "27.1.50"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@syncfusion/ej2-heatmap/-/ej2-heatmap-27.1.50.tgz#8bd6dd235b142f90584693008d02a38fa1e1de88"
+  integrity sha512-Nd2tNqFC32VeSLQzzPx4YP9Cn5VZjhlmmXFru5rf0+A3+uOSOq9sNrPfpNcTa8kWdNJwBLj9lqnSUldCu8C7Jg==
+  dependencies:
+    "@syncfusion/ej2-base" "~27.1.50"
+    "@syncfusion/ej2-compression" "~27.1.50"
+    "@syncfusion/ej2-data" "~27.1.50"
+    "@syncfusion/ej2-file-utils" "~27.1.50"
+    "@syncfusion/ej2-pdf-export" "~27.1.50"
+    "@syncfusion/ej2-svg-base" "~27.1.50"
+
+"@syncfusion/ej2-icons@~27.1.50":
+  version "27.1.50"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@syncfusion/ej2-icons/-/ej2-icons-27.1.50.tgz#af719706ced97c64b6c17eeee726a503cf29e435"
+  integrity sha512-LisXluEss0VnFuSh+pNSgHqT/Cg1FKTvkxdKWoSvqAma3dpcuCfrWP4svyMKPAsCi/hxAGdyy3ShKHu0PUP9iA==
+
+"@syncfusion/ej2-pdf-export@~27.1.50":
+  version "27.1.51"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@syncfusion/ej2-pdf-export/-/ej2-pdf-export-27.1.51.tgz#b75f18ac76932b473fb2c842cc90d8c34132fde2"
+  integrity sha512-Sbt5FNlL+S4W45YMwCpd+2hG+z5nrDdJn7ZeA/PDaj3Yzi4IbmT9xDIbVtO06dGQAGwUywFlhXphxcR/3JWHvQ==
+  dependencies:
+    "@syncfusion/ej2-compression" "~27.1.50"
+
+"@syncfusion/ej2-react-base@~27.1.50":
+  version "27.1.50"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@syncfusion/ej2-react-base/-/ej2-react-base-27.1.50.tgz#6eeebbc07f44d0f047374656ad60df96571fea6d"
+  integrity sha512-mmU99YM+oHbSYVjH0zo8THxyCYc63WRks9JSMFlfF+Bq1uNxJ5a5Cwovhyl12uffrdZDmIxpH35yXy0T9ueCEQ==
+  dependencies:
+    "@syncfusion/ej2-base" "~27.1.50"
+
+"@syncfusion/ej2-react-heatmap@^27.1.50":
+  version "27.1.50"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@syncfusion/ej2-react-heatmap/-/ej2-react-heatmap-27.1.50.tgz#b17261ab28ba549d4763909916f434bac2ca23f8"
+  integrity sha512-d7YQPPUypm2kmDSLPS3F0rwhdYucWJw2mW7Vuw8i9L1mGXmaDu+O8pOH804vXGl8TQYC4vxWzpDRtl13ZHvMbw==
+  dependencies:
+    "@syncfusion/ej2-base" "~27.1.50"
+    "@syncfusion/ej2-heatmap" "27.1.50"
+    "@syncfusion/ej2-react-base" "~27.1.50"
+
+"@syncfusion/ej2-svg-base@~27.1.50":
+  version "27.1.50"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@syncfusion/ej2-svg-base/-/ej2-svg-base-27.1.50.tgz#d08efe009d60f79a9bba7d1b63f9de760851a1c7"
+  integrity sha512-SCX38cHp1aHdZoTQbFBotbBpZfYW8Qs9tm15j8ylNXVJ/w+kkjy4JjrZUIkjImDmfxVL5BP9dw/INMRaRaRLBQ==
+  dependencies:
+    "@syncfusion/ej2-base" "~27.1.50"
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://ffn.jfrog.io/ffn/api/npm/npm/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
@@ -3023,7 +3096,16 @@ streamsearch@^1.1.0:
   resolved "https://ffn.jfrog.io/ffn/api/npm/npm/streamsearch/-/streamsearch-1.1.0.tgz#404dd1e2247ca94af554e841a8ef0eaa238da764"
   integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
 
-"string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+"string-width-cjs@npm:string-width@^4.2.0":
+  version "4.2.3"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+string-width@^4.1.0:
   version "4.2.3"
   resolved "https://ffn.jfrog.io/ffn/api/npm/npm/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -3104,7 +3186,14 @@ string.prototype.trimstart@^1.0.8:
     define-properties "^1.2.1"
     es-object-atoms "^1.0.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
+  version "6.0.1"
+  resolved "https://ffn.jfrog.io/ffn/api/npm/npm/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://ffn.jfrog.io/ffn/api/npm/npm/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==

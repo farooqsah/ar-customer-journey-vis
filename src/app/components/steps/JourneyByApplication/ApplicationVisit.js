@@ -1,43 +1,74 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { Box, Typography, Stepper, Step, StepLabel, Button } from '@mui/material';
-import Link from 'next/link'
+import { Box, Typography, Stepper, Step, StepLabel, Button, Radio, RadioGroup, FormControlLabel } from '@mui/material'
+import {  useState } from 'react'
+import { getDataSource } from './const-heatmap-data';
+
+import HeatMap from './HeatMap'
+
 const ApplicationVisit = props => {
-  
+
+    const [ heatmapData, setHeatmapData ] = useState( getDataSource() );
+
+   const handleInputChange = event => {
+    event.persist();
+    console.log('handleInputChange:::::', event.target)
+    setHeatmapData(getDataSource(event.target.value));
+   }
   return (
     <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
+    //   alignItems="center"
+    //   display="flex"
+    //   flexDirection="column"
+    //   justifyContent="center"
       minHeight="100vh"
-      padding={2}
+      padding={ 5 }
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography
+        gutterBottom
+        variant="h4"
+      >
         Customer Journey By app
       </Typography>
-     
-       <Box sx={{ maxWidth: 400 }}>
-    
-      <Stepper  orientation="vertical">
-        {props.steps.map((step, index) => (
-          <Step active = {true} key={index}>
-            <StepLabel
-    
+
+      <Box sx={ { maxWidth: 700 } }>
+
+        <Stepper >
+          { props.steps.map( ( step, index ) => (
+            <Step
+              active = { true }
+              key={ index }
             >
-              
-    
-              <Button href="/aggregate-visualizer" variant="contained">{step} &gt; </Button>
-            </StepLabel>
+              <StepLabel >
+
+                <Button
+                  href="/aggregate-visualizer"
+                  variant="contained"
+                >{ step } &gt;
+                </Button>
+              </StepLabel>
+
+            </Step>
+          ) ) }
+        </Stepper>
         
-          </Step>
-        ))}
-      </Stepper>
-
       </Box>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+         onChange={handleInputChange}
+      >
+         <FormControlLabel value="basic" control={<Radio />} label="default" />
+        <FormControlLabel value="heatmapData_DREnrolled" control={<Radio />} label="DREnrolled" />
+        <FormControlLabel value="heatmapData_DRInactive" control={<Radio />} label="DRInactive" />
+        <FormControlLabel value="heatmapData_PLEnrolled" control={<Radio />} label="PLEnrolled" />
+         <FormControlLabel value="heatmapData_DREnrolledStraight" control={<Radio />} label="DREnrolledStraight" />
+        
+      </RadioGroup>
+      <HeatMap heatmapData = { heatmapData} />
     </Box>
-  );
-};
+  )
+}
 
-export default ApplicationVisit;
+export default ApplicationVisit
