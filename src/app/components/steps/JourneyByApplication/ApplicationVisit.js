@@ -3,7 +3,7 @@
 import { Box, Typography, Stepper, Step, StepLabel, Button, Radio, RadioGroup, FormControlLabel } from '@mui/material'
 import {  useState } from 'react'
 import { getDataSource } from './const-heatmap-data';
-
+import CustomizedDialogs from './CustomizedDialogs'
 import HeatMap from './HeatMap'
 
 const ApplicationVisit = props => {
@@ -66,6 +66,8 @@ const ApplicationVisit = props => {
          <FormControlLabel value="heatmapData_DREnrolledStraight" control={<Radio />} label="DREnrolledStraight" />
         
       </RadioGroup>
+      <CustomizedDialogs imageSrc = "/images/APLhome.png" label="APL Home" />
+       <CustomizedDialogs imageSrc = "/images/debtReleaf.png" label="DEbt relea" />
       <HeatMap heatmapData = { heatmapData} />
     </Box>
   )
