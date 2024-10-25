@@ -61,7 +61,7 @@ const ApplicationVisit = (props) => {
         name="row-radio-buttons-group"
         onChange={handleInputChange}
       >
-        <FormControlLabel value="basic" control={<Radio />} label="default" />
+
         <FormControlLabel
           value="heatmapData_DREnrolled"
           control={<Radio />}
