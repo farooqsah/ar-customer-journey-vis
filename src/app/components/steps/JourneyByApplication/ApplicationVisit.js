@@ -36,7 +36,6 @@ const ApplicationVisit = (props) => {
       <Typography
         gutterBottom
         variant="h4"
-        gutterBottom
         fontFamily={"var(--font-ultramarine)"}
         fontWeight={700}
       >
