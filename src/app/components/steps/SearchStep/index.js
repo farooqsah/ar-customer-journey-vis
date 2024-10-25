@@ -54,7 +54,11 @@ const SearchStep = () => {
       minHeight="680px"
       padding={2}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography
+        variant="h4"
+        gutterBottom
+        fontFamily={'var(--font-ultramarine)'}
+      >
         Customer Journey
       </Typography>
       <Box
@@ -72,8 +76,14 @@ const SearchStep = () => {
           width="100%"
           maxWidth="400px"
         >
-          <Typography variant="h6">Individual Search</Typography>
-          <Typography variant="h7" sx={{ marginBottom: 2, fontSize: '15px' }}>
+          <Typography variant="h6" fontFamily={'var(--font-ultramarine)'}>
+            Individual Search
+          </Typography>
+          <Typography
+            variant="h7"
+            fontFamily={'var(--font-ultramarine)'}
+            sx={{ marginBottom: 2, fontSize: '14px' }}
+          >
             Visualize the Journey path of a specific user
           </Typography>
           {['visit_id', 'profile_id', 'email', 'phone'].map((fieldName) => (
@@ -94,7 +104,12 @@ const SearchStep = () => {
             />
           ))}
           {individualErrorMessage && (
-            <Typography color="error" variant="body2" sx={{ marginTop: 1 }}>
+            <Typography
+              color="error"
+              variant="body2"
+              sx={{ marginTop: 1 }}
+              fontFamily={'var(--font-ultramarine)'}
+            >
               {individualErrorMessage}
             </Typography>
           )}
@@ -104,6 +119,7 @@ const SearchStep = () => {
             color="primary"
             startIcon={<SearchIcon />}
             sx={{ marginTop: 2 }}
+            fontFamily={'var(--font-ultramarine)'}
           >
             Search
           </Button>
@@ -120,8 +136,13 @@ const SearchStep = () => {
           width="100%"
           maxWidth="400px"
         >
-          <Typography variant="h6">Group Search</Typography>
-          <Typography sx={{ marginBottom: 2, fontSize: '15px' }}>
+          <Typography variant="h6" fontFamily={'var(--font-ultramarine)'}>
+            Group Search
+          </Typography>
+          <Typography
+            sx={{ marginBottom: 2, fontSize: '14px' }}
+            fontFamily={'var(--font-ultramarine)'}
+          >
             Visualize the Journey by a Segment, Partner, or Campaign
           </Typography>
           {['utm_source', 'utm_adcampaign', 'origin', 'date'].map(
@@ -144,7 +165,12 @@ const SearchStep = () => {
             )
           )}
           {groupErrorMessage && (
-            <Typography color="error" variant="body2" sx={{ marginTop: 1 }}>
+            <Typography
+              color="error"
+              variant="body2"
+              sx={{ marginTop: 1 }}
+              fontFamily={'var(--font-ultramarine)'}
+            >
               {groupErrorMessage}
             </Typography>
           )}
@@ -154,6 +180,7 @@ const SearchStep = () => {
             color="primary"
             startIcon={<SearchIcon />}
             sx={{ marginTop: 2 }}
+            fontFamily={'var(--font-ultramarine)'}
           >
             Search
           </Button>
