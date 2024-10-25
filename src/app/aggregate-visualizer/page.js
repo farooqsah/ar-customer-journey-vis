@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Chart } from 'react-google-charts';
 import Layout from '../components/Layout';
 import {
+  Box,
   FormControl,
   FormControlLabel,
   Radio,
@@ -111,31 +112,41 @@ const AggregateVisualizer = () => {
 
   return (
     <Layout>
-      <FormControl component="fieldset">
-        <RadioGroup
-          row
-          aria-label="colorMode"
-          name="colorMode"
-          value={colorMode}
-          onChange={handleColorModeChange}
-        >
-          <FormControlLabel
-            value="gradient"
-            control={<Radio />}
-            label="Gradient"
-          />
-          <FormControlLabel value="source" control={<Radio />} label="Source" />
-          <FormControlLabel value="target" control={<Radio />} label="Target" />
-          <FormControlLabel value="none" control={<Radio />} label="None" />
-        </RadioGroup>
-      </FormControl>
-      <Chart
-        chartType="Sankey"
-        width="100%"
-        height="680px"
-        data={data}
-        options={options}
-      />
+      <Box margin="0 10px">
+        <FormControl component="fieldset">
+          <RadioGroup
+            row
+            aria-label="colorMode"
+            name="colorMode"
+            value={colorMode}
+            onChange={handleColorModeChange}
+          >
+            <FormControlLabel
+              value="gradient"
+              control={<Radio />}
+              label="Gradient"
+            />
+            <FormControlLabel
+              value="source"
+              control={<Radio />}
+              label="Source"
+            />
+            <FormControlLabel
+              value="target"
+              control={<Radio />}
+              label="Target"
+            />
+            <FormControlLabel value="none" control={<Radio />} label="None" />
+          </RadioGroup>
+        </FormControl>
+        <Chart
+          chartType="Sankey"
+          width="100%"
+          height="680px"
+          data={data}
+          options={options}
+        />
+      </Box>
     </Layout>
   );
 };

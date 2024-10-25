@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-import { Box, Button, TextField, Typography } from '@mui/material';
+import { Box, Button, TextField, Typography, Divider } from '@mui/material';
 import { useForm, Controller } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import Layout from '../components/Layout';
@@ -16,21 +16,38 @@ const removeEmptyValues = (obj) => {
 const UserSearch = () => {
   const router = useRouter();
   const { control, handleSubmit } = useForm();
-  const [errorMessage, setErrorMessage] = useState('');
+  const [individualErrorMessage, setIndividualErrorMessage] = useState('');
+  const [groupErrorMessage, setGroupErrorMessage] = useState('');
 
-  const onSubmit = (data) => {
+  const onSubmitIndividual = (data) => {
     const enteredData = removeEmptyValues(data);
 
     if (Object.keys(enteredData).length === 0) {
-      setErrorMessage('Please enter at least one search field');
+      setIndividualErrorMessage('Please enter at least one search field');
       return;
     }
 
-    setErrorMessage(''); // Clear any previous error messages
+    setIndividualErrorMessage(''); // Clear any previous error messages
 
     // Navigate to the next page with form data as query parameters
     router.push(
       `/visitor-session?${new URLSearchParams(enteredData).toString()}`
+    );
+  };
+
+  const onSubmitGroup = (data) => {
+    const enteredData = removeEmptyValues(data);
+
+    if (Object.keys(enteredData).length === 0) {
+      setGroupErrorMessage('Please enter at least one search field');
+      return;
+    }
+
+    setGroupErrorMessage(''); // Clear any previous error messages
+
+    // Navigate to the next page with form data as query parameters
+    router.push(
+      `/aggregate-visualizer?${new URLSearchParams(enteredData).toString()}`
     );
   };
 
@@ -47,49 +64,105 @@ const UserSearch = () => {
         <Typography variant="h4" gutterBottom>
           Customer Journey
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Enter search data in a field below
-        </Typography>
         <Box
-          component="form"
-          onSubmit={handleSubmit(onSubmit)}
           display="flex"
-          flexDirection="column"
-          alignItems="center"
-          width="100%"
-          maxWidth="400px"
+          justifyContent="center"
+          alignItems="flex-start"
+          width="75vw"
         >
-          {['visit_id', 'profile_id', 'email', 'phone'].map((fieldName) => (
-            <Controller
-              key={fieldName}
-              name={fieldName}
-              control={control}
-              defaultValue=""
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  label={fieldName}
-                  variant="outlined"
-                  margin="normal"
-                  fullWidth
-                />
-              )}
-            />
-          ))}
-          {errorMessage && (
-            <Typography color="error" variant="body2" sx={{ marginTop: 1 }}>
-              {errorMessage}
-            </Typography>
-          )}
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            startIcon={<SearchIcon />}
-            sx={{ marginTop: 2 }}
+          <Box
+            component="form"
+            onSubmit={handleSubmit(onSubmitIndividual)}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            width="100%"
+            maxWidth="400px"
           >
-            Search
-          </Button>
+            <Typography variant="h6" sx={{ marginBottom: 2 }}>
+              Individual Search
+            </Typography>
+            {['visit_id', 'profile_id', 'email', 'phone'].map((fieldName) => (
+              <Controller
+                key={fieldName}
+                name={fieldName}
+                control={control}
+                defaultValue=""
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    label={fieldName}
+                    variant="outlined"
+                    margin="normal"
+                    fullWidth
+                  />
+                )}
+              />
+            ))}
+            {individualErrorMessage && (
+              <Typography color="error" variant="body2" sx={{ marginTop: 1 }}>
+                {individualErrorMessage}
+              </Typography>
+            )}
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              startIcon={<SearchIcon />}
+              sx={{ marginTop: 2 }}
+            >
+              Search
+            </Button>
+          </Box>
+
+          <Divider orientation="vertical" flexItem sx={{ marginX: 2 }} />
+
+          <Box
+            component="form"
+            onSubmit={handleSubmit(onSubmitGroup)}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            width="100%"
+            maxWidth="400px"
+          >
+            <Typography variant="h6" sx={{ marginBottom: 2 }}>
+              Group Search
+            </Typography>
+            {['utm_source', 'utm_adcampaign', 'origin', 'date'].map(
+              (fieldName) => (
+                <Controller
+                  key={fieldName}
+                  name={fieldName}
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <TextField
+                      {...field}
+                      label={fieldName}
+                      variant="outlined"
+                      margin="normal"
+                      fullWidth
+                    />
+                  )}
+                />
+              )
+            )}
+            {groupErrorMessage && (
+              <Typography color="error" variant="body2" sx={{ marginTop: 1 }}>
+                {groupErrorMessage}
+              </Typography>
+            )}
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              startIcon={<SearchIcon />}
+              sx={{ marginTop: 2 }}
+            >
+              Search
+            </Button>
+          </Box>
         </Box>
       </Box>
     </Layout>
