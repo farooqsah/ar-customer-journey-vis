@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Stepper, Step, StepLabel } from '@mui/material';
+import { Box, Typography, Stepper, Step, StepLabel, Button } from '@mui/material';
 import Link from 'next/link'
 const ApplicationVisit = props => {
   
@@ -27,7 +27,8 @@ const ApplicationVisit = props => {
     
             >
               
-              <Link href="/aggregate-visualizer">{step}</Link>
+    
+              <Button href="/aggregate-visualizer" variant="contained">{step} &gt; </Button>
             </StepLabel>
         
           </Step>
